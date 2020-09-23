@@ -3,7 +3,7 @@
   
   get_header();
 
-  $folder = $PATH.'/assets/images/';
+  $folder = $PATH.'/images/';
   $image = $folder . 'diamond-1.png';
   
   $path = get_template_directory();  
@@ -19,7 +19,7 @@
   
   <div class="page-404__bottom bottom">
     <h5 class="bottom__title">Here`s some useful links</h5>
-    <a class="bottom__url" href="<?php echo get_home_url()?>">
+    <a class="bottom__url" href="#">
       Back to the <span class="bold">Home page</span>
     </a>
     <p class="bottom__contact">

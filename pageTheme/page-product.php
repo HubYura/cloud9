@@ -3,7 +3,7 @@
   
   get_header();
   
-  $folder = $PATH . '/assets/images/page-product/';
+  $folder = $PATH . '/images/page-product/';
   $path = get_template_directory();  
   $topImage = $folder.'top-diamond.png';  
   $blockImageOne = $folder.'block-1.png';

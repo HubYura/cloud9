@@ -1,6 +1,6 @@
-<?php $subscribeArrowPath = $PATH . '/assets/images/ic_arrow_right.png';  ?>
+<?php $subscribeArrowPath = $PATH . '/images/ic_arrow_right.png';  ?>
 
-<div class="problem__bottom bottom">
+<section class="problem__bottom bottom">
   <div class="bottom__list list">
     <h4 class="bottom__title">Join the List</h4>
     <p class="bottom__text">Sign up to receive exclusive member updates, specials, product updates, and much more!</p>
@@ -28,4 +28,4 @@
       <?php echo PrimaryButton('e-mail us'); ?>
     </div>
   </div>
-</div>
+</section>

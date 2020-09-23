@@ -3,7 +3,7 @@
   
   get_header();
 
-  $folder = $PATH . '/assets/images/page-problem/';
+  $folder = $PATH . '/images/page-problem/';
   $path = get_template_directory();  
   $diamondImagePath = $folder . 'diamond.png';
   $diamondImageSmallPath = $folder . 'diamond-mobile.png';  

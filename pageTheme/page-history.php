@@ -3,7 +3,7 @@
   
   get_header();
   
-  $folder = $PATH . '/assets/images/page-history/';
+  $folder = $PATH . '/images/page-history/';
   $path = get_template_directory();  
   $topImage_ = $folder . 'top.png';  
   $blockImageOne = $folder . 'block-1.png';

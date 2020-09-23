@@ -4,71 +4,74 @@
     $menuHelp = array('theme_location' => 'footer_help');
     
     $path = get_template_directory_uri();
-    $facebookPath = $path . '/assets/images/facebook-white.png';
-    $instagramPath = $path . '/assets/images/instagram-white.png';
-    $logoPath = $path . '/assets/images/logo-white.png';
+    $facebookPath = $path . '/images/facebook-white.svg';
+    $instagramPath = $path . '/images/instagram-white.svg';
+    $logoPath = $path . '/images/logo-white.svg';
   ?>
   
   <!-- Footer big design -->
-  <footer class="footer-big">
-    <section class="footer-big__tools tools">
-      <div class="tools__about">
-        <p class="tools__title">About</p>
-        <?php 
-          wp_nav_menu($menuAbout);
-        ?>
-      </div>
+  <footer class="footer-big__wrapper">  
+    <div class="footer-big">
+      <div class="footer-big__inner"></div>
+      <section class="footer-big__tools tools">
+        <div class="tools__about">
+          <p class="tools__title">About</p>
+          <?php 
+            wp_nav_menu($menuAbout);
+          ?>
+        </div>
+        
+        <div class="tools__diamonds">
+          <p class="tools__title">Diamonds</p>
+          <?php 
+            wp_nav_menu($menuDiamonds);
+          ?>
+        </div>
+        
+        <div class="tools__help">
+          <p class="tools__title">Help</p>
+          <?php 
+            wp_nav_menu($menuHelp);
+          ?>
+        </div>
+      </section>
       
-      <div class="tools__diamonds">
-        <p class="tools__title">Diamonds</p>
-        <?php 
-          wp_nav_menu($menuDiamonds);
-        ?>
-      </div>
+      <section class="footer-big__right right">
+        <div class="right__logo">
+          <img src="<?php echo $logoPath ?>" alt="Image">
+        </div>
+        
+        <ul class="right__network-list">
+          <li class="right__network">
+            <a href="#" target="_blank">
+              Facebook
+            </a>
+          </li>
+          <li class="right__network">
+            <a href="#" target="_blank">
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </section>
       
-      <div class="tools__help">
-        <p class="tools__title">Help</p>
-        <?php 
-          wp_nav_menu($menuHelp);
-        ?>
-      </div>
-    </section>
-    
-    <section class="footer-big__right right">
-      <div class="right__logo">
-        <img src="<?php echo $logoPath ?>" alt="Image">
-      </div>
-      
-      <ul class="right__network-list">
-        <li class="right__network">
-          <a href="#" target="_blank">
-            <img src="<?php echo $facebookPath ?>" width="32" height="32" alt="Facebook" >
-          </a>
-        </li>
-        <li class="right__network">
-          <a href="#" target="_blank">
-            <img src="<?php echo $instagramPath ?>" width="32" height="32" alt="Instagram" >
-          </a>
-        </li>
-      </ul>
-    </section>
-    
-    <section class="footer-big__bottom bottom">
-      <ul class="bottom__list">
-        <li class="bottom__item">
-          <a href="#" target="_blank">Copyright © 2020 CLOUD, LLC</a>
-        </li>        
-        <li class="bottom__item">
-          <a href="#" target="_blank">Terms & Conditions</a>
-        </li>
-         <li class="bottom__item">
-          <a href="#" target="_blank">Privacy Policy</a>
-        </li>
-         <li class="bottom__item empty">
-          <a href="#" target="_blank">Cookie Policy</a>
-        </li>
-      </ul>
-    </section>
+      <section class="footer-big__bottom bottom">
+        <ul class="bottom__list">
+          <li class="bottom__item">
+            <a href="#" target="_blank">Copyright © 2020 CLOUD, LLC</a>
+          </li>        
+          <li class="bottom__item">
+            <a href="#" target="_blank">Terms & Conditions</a>
+          </li>
+           <li class="bottom__item">
+            <a href="#" target="_blank">Privacy Policy</a>
+          </li>
+           <li class="bottom__item empty">
+            <a href="#" target="_blank">Cookie Policy</a>
+          </li>
+        </ul>
+      </section>    
+    </div>
   </footer>
   
   <!-- Footer small design -->
@@ -126,8 +129,9 @@
       <p class="row-3__copyright">Copyright © 2020 CLOUD, LLC</p> 
     </section>
   </footer>
-
-  <?php wp_footer(); ?>
+  
+  <script src="dist/main.js"></script>
+  <script src="../../wordpress-4.6.1/dist/main.js"></script>
   
 </body>
 </html>

@@ -1,8 +1,14 @@
 /*
-  Theme Name: Cloud9diamonds
+  Theme Name: Main
   Version: 1
-  Description: cloud9diamonds
-  Author:
-  Author URL: 
-  Text Domain: cloud9diamonds
+  Description: Empty
+  Author: Oleg
+  Author URL: Empty
 */
+
+body {
+  color: #191919;
+}
+
+/* This file is used for starting of the current Wordpress theme
+   All styles files is compiled in dist/main.css */

@@ -4,7 +4,9 @@
   <meta charset="utf-8" />
   <title>Diamonds</title>
   <meta name="viewport" content="width=device-width">
-  <?php wp_head(); ?>
+  <link rel="stylesheet" href="<?php echo get_stylesheet_uri() ?>" />
+  <link rel="stylesheet" href="dist/main.css" />
+  <link rel="stylesheet" href="../../wordpress-4.6.1/dist/main.css" />
 </head>
 <body>
   <?php 
@@ -16,34 +18,52 @@
     
     // Variables
     $path = get_template_directory_uri();
-    $closeButtonPath = $PATH . '/assets/images/header-close.php';
-    $facebookPath = $path . '/assets/images/facebook.png';
-    $instagramPath = $path . '/assets/images/instagram.png';
-    $logoPath = $PATH . '/assets/images/header-diamond.php';
-    $navButtonPath = $path . '/assets/images/nav-button.png';
-    $menuMobileOpenPath = $path . '/assets/images/menu-mobile-open.png';
-  ?>
-
-  <header class="header">
-    <ul class="header__grey-list">
-      <li class="header__grey-item">Ad block</li>
-      <li class="header__grey-item">Special Offer</li>
-      <li class="header__grey-item empty">Call to action</li>      
-    </ul>
-    <div class="header__grey-close">
-      <?php include($closeButtonPath); ?>
-    </div>
+    $closeButtonPath = $PATH . 'images/header-close.php';
+    $logoPath = $PATH . 'images/header-diamond.php';
+    $navButtonPath = $path . '/images/nav-button.png';
+    $menuMobileOpenPath = $path . '/images/menu-mobile-open.png';
     
+    $facebookPath = $path . '/images/facebook.svg';
+    $instagramPath = $path . '/images/instagram.svg';
+  ?>
+  
+  <div class="header-grey grey">
+    <div class="grey__inner">
+      <ul class="grey__list">
+        <li class="grey__item">
+          <a href="#">Ad block</a>
+        </li>
+        <li class="grey__item">
+          <a href="#">Special Offer</a>        
+        </li>
+        <li class="grey__item empty">
+          <a href="#">Call to action</a>
+        </li>      
+      </ul>
+      <div class="grey__close">
+        <?php include($closeButtonPath); ?>
+      </div>
+    </div>
+  </div>
+  
+  <header class="header">
     <div class="header__block block">
       <ul class="block__network-list">
         <li class="block__network">
-          <a href="#" target="_blank">
-            <img src="<?php echo $facebookPath ?>" width="32" height="32" alt="Facebook" >
-          </a>
+          <a href="#" target="_blank">Facebook</a>
         </li>
         <li class="block__network">
+          <a href="#" target="_blank">Instagram</a>
+        </li>
+        
+        <li class="block__network-small">
           <a href="#" target="_blank">
-            <img src="<?php echo $instagramPath ?>" width="32" height="32" alt="Instagram" >
+            <img src="<?php echo $facebookPath ?>" width="32" height="32" alt="Facebook">
+          </a>
+        </li>
+        <li class="block__network-small">
+          <a href="#" target="_blank">
+            <img src="<?php echo $instagramPath ?>" width="32" height="32" alt="Instagram">
           </a>
         </li>
       </ul>
@@ -53,11 +73,17 @@
       </div>
       
       <div class="block__phone">
-        <?php the_field('phone','option'); ?>
+        <?php //echo get_post_meta(get_the_ID(), 'header_phone', true); ?>
+        1-123-454-1234
       </div>
       
       <ul class="block__language-list">
-          <?php pll_the_languages(array('show_flags'=>0,'show_names'=>1)); ?>
+        <li class="block__language">
+          <a href="#">Deu</a>
+        </li>
+        <li class="block__language empty">
+          <a href="#">Eng</a>
+        </li>
       </ul>
     
       <div class="block__nav nav">

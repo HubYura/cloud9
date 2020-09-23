@@ -3,7 +3,7 @@
   
   get_header();
 
-  $folder = $PATH . '/assets/images/page-technology/';
+  $folder = $PATH . '/images/page-technology/';
   $path = get_template_directory();  
   $topImage = $folder.'image-2.png';  
   $methodImage1 = $folder.'1.png';
@@ -13,8 +13,8 @@
   $methodImage5 = $folder.'5.png';
   $methodImage6 = $folder.'6.png';
   $processImage = $folder.'image-3.png';  
-  $questionsImageClose = $PATH.'/assets/images/icon-diamond-1.png';
-  $questionsImageOpen = $PATH.'/assets/images/icon-diamond.png';
+  $questionsImageClose = $PATH.'/images/icon-diamond-1.png';
+  $questionsImageOpen = $PATH.'/images/icon-diamond.png';  
   $bottom = $path . '/common/bottom.php';
 ?>
 

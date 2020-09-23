@@ -1,7 +1,7 @@
 <?php
-  $folder = $PATH.'/assets/images/';
-  $subscribeImagePath = $folder . 'icon5.png';
-  $subscribeArrowPath = $folder . 'ic_arrow_right.png';
+  $folder = $PATH.'/images/';
+  $subscribeImagePath = $folder . 'icon5.svg';
+  $subscribeArrowPath = $folder . 'ic_arrow_right.svg';
 ?>
 
 <section class="subscribe">
